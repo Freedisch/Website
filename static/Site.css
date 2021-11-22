@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color:#f3f3f3 ;
+}
+/*Styling the nav bar*/
+li,a{
+    font-family: Roboto;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+}
+
+header nav{
+    background-color: #fff;
+    width: 100%;
+    padding: 30px 10%;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 80px;
+}
+
+nav ul li a{
+    transition: all 0.3s ease 0s;
+}
+nav ul ul{
+    position: absolute;
+    top: 95px;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+}
+nav ul li:hover >ul{
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+}
+nav ul ul li a{
+    padding: 9px 15px;
+    line-height: 50px;
+}
+
+nav ul li a:hover,nav ul li a:active{
+    background-color: grey;
+    color: #fff;
+    padding: 9px 15px ;
+    border-radius: 3px;
+}
+
+.title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    align-items: center;
+    width: fit-content;
+    line-height: 80px;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #111;
+    float: right;
+    display: none;
+    line-height: 80px;
+    margin:auto;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+/*making the nav bar responsive for any device*/
+
+@media only screen and (max-width:1000px){
+    li,a{
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: 200;
+    }
+    
+    .checkbtn{
+        display: block;
+        
+        
+    }
+    nav ul{
+       position: fixed;
+       width: 100%;
+       height: 50vh;
+       background: #fff;
+       top: 110px;
+       left: -100%;
+       text-align: center;
+       transition: all 0.5s;
+    }
+    nav ul li{
+       display: block;
+       margin: 50px 0;
+       line-height: 30px;
+       
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/*Styling the footer bar */
+footer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #111;
+    color: #fff;
+    font-family: Roboto;
+}
+
+.main-content{
+    display: flex;
+}
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+/******Creation de la ligne rouge*******/
+.box .content:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    top: -10px;
+    background: #1a1a1a;
+}
+.box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #808080;
+    top: -10px;
+}
+/*********red line*********/
+.left .content p{
+    text-align: justify;
+} 
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+.left .content .social a{
+    padding: 0 2px;
+}
+.left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 00.3s;
+}
+
+.left .content .social a span:hover{
+    background: grey
+}
+.center .content .fas{
+    font-size: 1.4rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.center .content .fas:hover{
+    background: #808080;
+}
+.center .content .text{
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.center .content .phone{
+    margin: 10px 0;
+}
+.right form .text{
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    color: #808080;
+}
+.right form .msg{
+    margin-top: 10px;
+}
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 1.1rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+    color: #f3f3f3;
+}
+.right form input:focus, right form textarea:focus{
+    outline-color: #3498db;
+}
+.right form input{
+    height: 35px;
+}
+.right form .btn{
+    margin-top: 10px;
+}
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background:#808080;
+    color: #f3f3f3;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.right form .btn button:hover{
+    background: #000;
+}
+.bottom center{
+    padding: 5px;
+    font-size: 0.9rem;
+    background: #151515;
+}
+.bottom center span{
+    color: #808080;
+}
+.bottom center a{
+    color: #f12020;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 900px){
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box{
+        margin: 5px 0;
+    }
+    
+    
+
+}
+/*************footer***************/
+
+/**********Article page*******************/
+.produit{
+    padding: 3em;
+    font-family: Roboto;
+}
+.produit .article{
+    background: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 10px 5px #b2bec3;
+    text-align: center;
+}
+.produit h2{
+   font-family: 'Ubuntu', sans-serif;
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+}
+.produit .article .nom{
+    font-size: 18px;
+    font-weight: bold;
+}
+.produit .article .image img{
+    max-width: 100%;
+}
+.produit .article .describe{
+    font-size: 14px;
+    text-align: left;
+    margin: 1em;
+}
+.produit .article .btn button{
+    background: #808080;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    
+}
+.produit .article .btn button:hover{
+    background: #222222;
+}
+.produit .article .btn a{
+    color: #fff;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+}
+@media (max-width:500px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+/**************************Product page*********************************/
+.container-product{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 2em;
+}
+.container-product .image{
+    background: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 10px 5px #b2bec3;
+    text-align: center;
+    
+
+}
+.container-product .image img{
+    max-width: 100%;
+}
+.container-product .details{
+    margin: 2em;
+    padding: 2em;
+}
+.container-product .details h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    
+}
+.container-product .details .information p{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 200;
+}
+.container-product .details .btn-price{
+    margin: 1em;
+}
+.container-product .details .btn-price button{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    background: #111;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+.container-product .details .btn-price button:hover{
+    background: #808080;
+}
+.container-product .details .btn-price button a{
+    color: #f3f3f3;
+    font-family: Roboto;
+    font-weight: 300;
+}
+@media (max-width:500px){
+    .container-product{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.content-about{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 20px 40px;
+}
+.content-about  h1{
+    font-size: 60px;
+    font-style: italic;
+}
+.profiles{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+}
+.profile{
+    flex-basis: 260px;
+}
+.profile img{
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+}
+.profile:hover img{
+    filter: grayscale(0);
+}
+.profile h2{
+    margin: 30px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.profile h5{
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+.profile p{
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.icons{
+    margin:1rem;
+    font-size: 20px;
+}
+.icons span{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 00.3s;
+    cursor: pointer;
+}
+.icons span:hover{
+    background: #808080;
+}
+
+@media only screen and (max-width:1150px){
+    .profiles{
+        flex-direction: column;
+    }
+    .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile p{
+        text-align: center;
+        margin: 20px 40px 80px 60px;
+        font-size: 20px;
+    }
+}
+@media only screen and(max-width:900px){
+    .content-about h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .profiles{
+        margin: 20px 0;
+    }
+    .profile p{
+        margin: 20px 10px 80px 10px;
+    }
+}

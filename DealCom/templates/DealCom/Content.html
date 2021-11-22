@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/Site.css'%}">
+    <link rel="stylesheet" href="{% static '/fontawesome-free-5.15.3-web/css/all.css' %}">
+    <title>Acceuil</title>
+</head>
+<body>
+    <header>
+             <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn" >
+                    <i class="fas fa-bars"></i>
+                </label>
+                <a class="title" href="#">Deal.com</a>
+                <ul>
+                    <li><a href="{% url 'acceuil' %}">Acceuil</a></li>
+                    <li><a href="#">Categorie</a>
+                        <ul>
+                            <li><a href="#">Electronique</a></li>
+                            <li><a href="#">Vetements</a></li>
+                            <li><a href="#">Immobilier</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'about'%}">A propos de nous</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        {% block content %}
+            
+
+        {% endblock %}
+            
+            <section>
+                <footer>
+                    <div class="main-content">
+                        <div class="left box">
+                            <h2>A propos de nous</h2>
+                            <div class="content">
+                                <p>Я совершенно новичок в jQuery . Я пытаюсь понять, почему это выпадающее меню появляется перед эффектом jQuery. Я не могу отключить ul li ul , поэтому он обрабатывается только jQuery .., и я был бы очень признателен за любые мысли по этому поводу. Я включил ссылку на сайт здесь Как только вы... </p>
+                                <div class="social">
+                                    <a href="#"><span class="fab fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fab fa-twitter"></span></a>
+                                    <a href="#"><span class="fab fa-instagram"></span></a>
+                                    <a href="#"><span class="fab fa-youtube"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="center box">
+                            <h2>Adresse</h2>
+                            <div class="content">
+                                <div class="place">
+                                    <span class="fas fa-map-marker-alt"></span>
+                                    <span class="text">Togo, Lome</span>
+                                </div>
+                                <div class="phone">
+                                    <span class="fas fa-phone-alt"></span>
+                                    <span class="text">+00228-79648337</span>
+                                </div>
+                                <div class="mail">
+                                    <span class="fas fa-envelope"></span>
+                                    <span class="email">Freenine@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="right box">
+                            <h2>Contact nous</h2>
+                            <div class="content">
+                                <form action="#">
+                                    <div class="mail">
+                                        <div class="text">Email *</div> 
+                                        <input type="email" required>
+                                    </div>
+                                    <div class="message">
+                                        <div class="text">Message *</div>
+                                        <textarea cols="30" rows="3" required></textarea>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="submit">Envoyer</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <center>
+                            <span class="credit">Created By <a href="AboutUs.html">Freenine</a> | </span>
+                            <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+                        </center>
+                    </div>
+                </footer>
+            </section>
+
+    </main>
+
+</body>
+</html>

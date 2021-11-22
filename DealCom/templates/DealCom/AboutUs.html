@@ -1,0 +1,24 @@
+{% extends 'DealCom/Content.html' %}
+    <main>
+        {% block content %}
+           {% load static %}
+                <div class="content-about">
+                    <h1>The team</h1>
+                    <div class="profiles">
+                        <div class="profile">
+                            <img src="{% static '/thibaut.jpg'%}" >
+                            <h2>thibaut</h2>
+                            <h4>Web developper</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem eum, veritatis at autem,quis voluptatum nobis eaque numquam aperiam magnam quam harum voluptate in asperiores fugiat beatae explicabo. Labore, quas!</p>
+                            <div class="icons">
+                                <span class="fab fa-facebook-f"></span>
+                                <span class="fab fa-twitter"></span>
+                                <span class="fab fa-instagram"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       {% endblock %}    
+    </main>
+</body>
+</html>
