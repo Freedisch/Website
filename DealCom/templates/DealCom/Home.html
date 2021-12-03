@@ -5,21 +5,22 @@
         <section class="produit">
             <h2>Liste des produits</h2>
             <div class="container">
+                {% for product in products %}
                 <div class="article">
                     <div class="nom">
-                        Produit
+                        {{product.name}}
                     </div>
                     <div class="image">
-                        <img src="{% static '/2021-11-04.png'%}"/>/>
+                        <img src="{{product.image.url}}"/>
                     </div>
                     <div class="describe">
-                        Description des elements notre produit est le meileur sur le marche Togolais
+                        {{product.description}}
                     </div>
                     <div class="btn">
                         <button><a href="#">Voir le deal</a></button>
                     </div>
                 </div>
-                
+                {% endfor %}
 
                 <div class="article">
                     <div class="nom">
